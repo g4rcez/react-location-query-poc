@@ -1,8 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import logo from "./logo.svg";
+import { Link } from "react-location";
+import { SmartComponent } from "./types";
 
-function App() {
+const App: SmartComponent = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -10,17 +11,13 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="App-link" to="/test" rel="noopener noreferrer">
           Learn React
-        </a>
+        </Link>
       </header>
     </div>
   );
-}
+};
 
+App.displayName = "App";
 export default App;
